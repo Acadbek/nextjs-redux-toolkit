@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../redux/data";
 
 export default function Home() {
-  const user = useSelector((state) => state.data);
+  const user = useSelector((state) => state.data); // main data
   console.log(user, "user");
   const dispatch = useDispatch();
 
@@ -23,9 +23,7 @@ export default function Home() {
       {!user?.loading && user?.users?.length ? (
         <ul>
           {user?.users?.map((user) => (
-            <li style={{ color: "red" }} key={user?.id}>
-              {user?.name}
-            </li>
+            <li key={user?.id}>{user?.name}</li>
           ))}
         </ul>
       ) : null}

@@ -23,9 +23,7 @@ export default function About() {
       {!user?.loading && user?.users?.length ? (
         <ul>
           {user?.users?.map((user) => (
-            <li style={{ color: "red" }} key={user?.id}>
-              {user?.name}
-            </li>
+            <li key={user?.id}>{user?.name}</li>
           ))}
         </ul>
       ) : null}
