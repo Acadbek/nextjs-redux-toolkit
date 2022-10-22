@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUser } from "../redux/data";
+import { fetchUser } from "../../redux/data";
 
-export default function Home() {
+export default function About() {
   const user = useSelector((state) => state.data);
   console.log(user, "user");
   const dispatch = useDispatch();
@@ -14,9 +14,9 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Home page</h1>
+      <h1>About page</h1>
       <button>
-        <Link href={"/about"}>go to about page</Link>
+        <Link href={"/"}>Home Page</Link>
       </button>
       {user?.loading && <h2>Loading...</h2>}
       {!user?.loading && user?.error ? <h2>Error: {user?.error}</h2> : null}
