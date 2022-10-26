@@ -9,7 +9,7 @@ export default function About() {
     <div>
       <h1>Post List</h1>
       <button>
-        <Link href={"/"}>Home Page</Link>
+        <Link href={"/create"}>Create</Link>
       </button>
       {/* {user?.loading && <h2>Loading...</h2>}
       {!user?.loading && user?.error ? <h2>Error: {user?.error}</h2> : null}
