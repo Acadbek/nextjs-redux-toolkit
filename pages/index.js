@@ -5,7 +5,7 @@ import { fetchUser } from "../redux/data";
 
 export default function Home() {
   const user = useSelector((state) => state.data); // main data
-  console.log(user, "user");
+  // console.log(user, "user");
   const dispatch = useDispatch();
 
   useEffect(() => {

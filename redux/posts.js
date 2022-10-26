@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   loading: false,
-  posts: [],
+  posts: [] || window.localStorage.getItem("posts"),
   error: "",
 };
 
@@ -11,13 +11,15 @@ const postsSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action) => {
+      let sum = 0;
       const newTodo = {
-        id: new Date(),
+        id: state.posts.length + 1,
         title: action.payload.title,
         status: action.payload.status,
-        time: action.payload.time
+        time: action.payload.time,
       };
       state.posts.push(newTodo);
+      localStorage.setItem("posts", JSON.stringify(state.posts));
     },
   },
 });

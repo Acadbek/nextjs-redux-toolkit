@@ -43,18 +43,21 @@ const CreatePost = () => {
           type="text"
           value={valueRef.current.value}
           ref={valueRef}
+          placeholder="Title"
         />
         <input
           name="status"
           type="text"
           value={statusRef.current.value}
           ref={statusRef}
+          placeholder="Status"
         />
         <input
           name="time"
           type="text"
           value={timeRef.current.value}
           ref={timeRef}
+          placeholder="Time"
         />
       </div>
       <button onClick={onClick}>Submit</button>
