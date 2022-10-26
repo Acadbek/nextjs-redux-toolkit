@@ -16,7 +16,12 @@ export default function Home() {
     <div>
       <h1>Home page</h1>
       <button>
-        <Link href={"/about"}>go to about page</Link>
+        <Link href={"/posts"}>
+          POST
+        </Link>
+      </button>
+      <button>
+        <Link href={"/create"}>go to create page</Link>
       </button>
       {user?.loading && <h2>Loading...</h2>}
       {!user?.loading && user?.error ? <h2>Error: {user?.error}</h2> : null}
