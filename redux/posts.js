@@ -14,6 +14,8 @@ const postsSlice = createSlice({
       const newTodo = {
         id: new Date(),
         title: action.payload.title,
+        status: action.payload.status,
+        time: action.payload.time
       };
       state.posts.push(newTodo);
     },

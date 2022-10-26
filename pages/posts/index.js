@@ -15,7 +15,9 @@ export default function About() {
       {!user?.loading && user?.error ? <h2>Error: {user?.error}</h2> : null}
       {!user?.loading && user?.users?.length ? <ul></ul> : null} */}
       {user?.posts?.map((user) => (
-        <li key={user?.id}>{user?.title}</li>
+        <li key={user?.id}>
+          {user?.title} {user?.status} {user?.time}
+        </li>
       ))}
     </div>
   );
