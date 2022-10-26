@@ -11,7 +11,6 @@ const postsSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action) => {
-      let sum = 0;
       const newTodo = {
         id: state.posts.length + 1,
         title: action.payload.title,
