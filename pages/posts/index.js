@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 const Posts = () => {
-  const user = useSelector((state) => state.posts);
+  const user = useSelector((state) => state?.posts);
   const [inputVl, setInputVl] = useState("");
 
   return (
