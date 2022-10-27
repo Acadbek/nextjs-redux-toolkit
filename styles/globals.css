@@ -36,11 +36,13 @@ table {
 
 td,
 th {
-  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
+  border-bottom: 1px solid #ebeef6;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
 }
