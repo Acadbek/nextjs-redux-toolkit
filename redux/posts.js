@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   loading: false,
-  posts: [] || window.localStorage.getItem("posts"),
+  posts: [],
   error: "",
 };
 
@@ -18,7 +18,7 @@ const postsSlice = createSlice({
         time: action.payload.time,
       };
       state.posts.push(newTodo);
-      localStorage.setItem("posts", JSON.stringify(state.posts));
+      // localStorage.setItem("posts", JSON.stringify(state.posts));
     },
   },
 });
