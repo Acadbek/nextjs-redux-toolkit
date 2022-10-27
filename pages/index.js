@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUser } from "../redux/data";
 
-export default function Home() {
+const Home = () => {
   const user = useSelector((state) => state.data); // main data
-  // console.log(user, "user");
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,9 +15,7 @@ export default function Home() {
     <div>
       <h1>Home page</h1>
       <button>
-        <Link href={"/posts"}>
-          POST
-        </Link>
+        <Link href={"/posts"}>POST</Link>
       </button>
       <button>
         <Link href={"/create"}>go to create page</Link>
@@ -34,4 +31,6 @@ export default function Home() {
       ) : null}
     </div>
   );
-}
+};
+
+export default Home;

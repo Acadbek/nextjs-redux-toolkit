@@ -6,7 +6,7 @@ import logo from "../../public/icons/logo.svg";
 const Navbar = () => {
   return (
     <div className="w-full h-[48px] bg-white border-b border-b-[#EBEEF6] flex items-center pl-[30px]">
-      <Link className="" href={"/"}>
+      <Link href={"/"}>
         <Image src={logo} alt="logo" />
       </Link>
     </div>

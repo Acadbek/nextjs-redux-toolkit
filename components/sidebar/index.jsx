@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import icon from "../../public/icons/postsIcon.svg";
+
 const Sidebar = () => {
   return (
     <div className="bg-white px-3 h-full py-8">

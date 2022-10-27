@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-const About = () => {
+
+const Posts = () => {
   const user = useSelector((state) => state.posts);
   const [inputVl, setInputVl] = useState("");
 
@@ -47,4 +48,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Posts;
